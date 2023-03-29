@@ -10,12 +10,12 @@ body {
 }
 
 .hero {
-    width: 592px;
-    margin: 0 auto 72px;
+  width: 592px;
+  margin: 0 auto 72px;
 }
 
 .hero img {
-    margin-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 h1 {
@@ -31,12 +31,31 @@ h1 span {
   font-weight: 700;
 }
 
-p {
+p,
+footer {
   color: #7d7987;
   font-size: 14px;
   line-height: 28px;
 }
 
-span, a {
+span,
+a {
   color: #ff9900;
+}
+
+footer a + a {
+  margin-left: 28px;
+}
+
+.line {
+  width: 568px;
+  height: 0;
+  margin: 0 auto 8px;
+  border: 1px solid #eceff2;
+}
+
+#balls {
+ position: fixed;   
+ bottom: 0px;
+ right: 0px;
 }
