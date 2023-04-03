@@ -1,5 +1,11 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+body {
   background: #e5e5e5;
 }
 
@@ -31,6 +37,7 @@ header h1 {
   font-size: 36px;
   line-height: 42px;
   color: #ffffff;
+  margin-bottom: 24px;
 }
 
 header p {
@@ -51,6 +58,12 @@ fieldset {
   border: none;
 }
 
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 fieldset legend {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
@@ -60,4 +73,34 @@ fieldset legend {
 
   border-bottom: 1px solid #e6e6f0;
   padding-bottom: 16px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4958;
+  margin-bottom: 8px;
+}
+
+.input-wrapper label span {
+  font-size: 12px;
+  line-height: 20px;
+  color: #c1bccc;
+  margin-left: 12px;
+}
+
+.input-wrapper input {
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+  height: 56px;
+  padding: 0 24px;
+
+  font-size: 16px;
+  line-height: 26px;
+  color: #c1bccc;
 }
