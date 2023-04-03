@@ -90,17 +90,22 @@ fieldset legend {
 .input-wrapper label span {
   font-size: 12px;
   line-height: 20px;
-  color: #c1bccc;
+  color: #6c6a71;
   margin-left: 12px;
 }
 
-.input-wrapper input {
+.input-wrapper input, .input-wrapper textarea{
   border: 1px solid #e6e6f0;
   border-radius: 8px;
   height: 56px;
   padding: 0 24px;
-
+  color: #6c6a71;
   font-size: 16px;
   line-height: 26px;
-  color: #c1bccc;
+  
+}
+
+.input-wrapper textarea {
+  padding: 0; 
+  height: 168px;
 }
