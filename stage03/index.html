@@ -46,14 +46,34 @@
               <textarea id="event-info" type="text"></textarea>
             </div>
             <div class="input-wrapper">
-              <label for="event-category">Categoria</label
-              >
+              <label for="event-category">Categoria</label>
               <select id="event-category">
                 <option value="">Tipo do evento:</option>
                 <option value="live">Ao vivo</option>
                 <option value="podcast">Podcast</option>
                 <option value="mentorship">Mentoria</option>
               </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Privacidade</legend>
+            <div class="input-wrapper">
+              <label for="event-email"
+                >E-mail do administrador
+                <span>(digite um email válido)</span></label
+              >
+              <input id="event-email" type="email" />
+            </div>
+            <div class="input-wrapper">
+              <label for="event-password"
+                >Senha de acesso para os participantes<span
+                  >(mínimo 8 caracteres)</span
+                ></label
+              >
+              <input id="event-password" type="password" />
             </div>
           </div>
         </fieldset>

@@ -52,6 +52,9 @@ form {
   background: #fafafc;
   min-height: 300px;
   padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 fieldset {
