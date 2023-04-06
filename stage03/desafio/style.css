@@ -45,3 +45,26 @@ header p {
   line-height: 30px;
   font-weight: 400;
 }
+
+form {
+  background-color: #ffffff;
+  margin-top: 58px;
+  padding: 64px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  font-family: "Staatliches", sans-serif;
+  font-size: 24px;
+  line-height: 34px;
+  text-transform: uppercase;
+
+  color: #535971;
+  font-weight: 400;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e6e6f0;
+}
