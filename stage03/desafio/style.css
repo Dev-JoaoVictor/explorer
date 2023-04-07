@@ -72,28 +72,38 @@ fieldset legend {
   border-bottom: 1px solid #e6e6f0;
 }
 
-.teste {
+.col-2 {
   display: flex;
   gap: 22px;
+}
+
+.col-2 > div {
+  width: 50%;
 }
 
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  margin-bottom: 16px;
 }
 
-.input-wrapper label {
+.input-wrapper  label {
   font-size: 14px;
   line-height: 24px;
   color: #4e4958;
   margin-bottom: 8px;
 }
 
-.input-wrapper input {
+.input-wrapper input{
   background: #fafafc;
   border: 1px solid #e6e6f0;
   border-radius: 8px;
   height: 56px;
   padding: 0 24px;
+}
+
+.input-wrapper label span {
+  font-size: 12px;
+  line-height: 20px;
+  color: #C1BCCC;
 }

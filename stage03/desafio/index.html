@@ -23,7 +23,7 @@
         <fieldset>
           <div class="fieldset-wrapper">
             <legend>Informações pessoais</legend>
-            <div class="teste">
+            <div class="col-2">
               <div class="input-wrapper">
                 <label for="name">Nome</label>
                 <input type="text" id="name" />
@@ -32,6 +32,18 @@
                 <label for="surname">Sobrenome</label>
                 <input type="text" id="surname" />
               </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="email"
+                >Email <span>(digite um email válido)</span>
+              </label>
+              <input type="email" id="email" />
+            </div>
+            <div class="input-wrapper">
+              <label for="password"
+                >Senha <span>(minímo de 6 caracteres)</span>
+              </label>
+              <input required minlength="6" type="password" id="password" />
             </div>
           </div>
         </fieldset>
