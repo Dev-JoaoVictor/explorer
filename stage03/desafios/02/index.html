@@ -18,51 +18,76 @@
       <header>
         <h1>Avalie a sua mentoria</h1>
         <p>Chegou a hora de avaliar o seu mentor, bora lá</p>
-        <img src="img1.svg" alt="">
+        <img src="img1.svg" alt="" />
       </header>
       <div class="form-title">
         <h1>Informações pessoais</h1>
       </div>
       <form action="">
-          <fieldset>
-            <div class="fieldset-wrapper">
-              <div class="col-2">
-                <div class="input-wrapper">
-                  <label for="name">Nome</label>
-                  <input type="text">
-                </div>
-                <div class="input-wrapper">
-                  <label for="surname">Sobrenome</label>
-                  <input type="text">
-                </div>
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <div class="col-2">
+              <div class="input-wrapper">
+                <label for="name">Nome</label>
+                <input type="text" />
               </div>
               <div class="input-wrapper">
-                <label for="surname">Email <span>(digite um email valído)</span> </label>
-                <input type="text">
+                <label for="surname">Sobrenome</label>
+                <input type="text" />
               </div>
             </div>
-          </fieldset>
-          <fieldset>
-            <div class="fieldset-wrapper">
-              <legend>Informações do mentor</legend>
-            </div>
             <div class="input-wrapper">
-              <label for="mentor">Selecione quem foi o seu mentor</label>
-              <select  id="mentor">
-                <option value="mentor1">João</option>
-                <option value="mentor1">Victor</option>
-                <option value="mentor1">Pedro</option>
-              </select>
+              <label for="surname"
+                >Email <span>(digite um email valído)</span>
+              </label>
+              <input type="text" />
             </div>
-            <div class="input-wrapper">
-              <label for="feedback">Informações extras</label>
-              <textarea id="feedback" type="text"></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Informações do mentor</legend>
+          </div>
+          <div class="input-wrapper">
+            <label for="mentor">Selecione quem foi o seu mentor</label>
+            <select id="mentor">
+              <option value="mentor1">João</option>
+              <option value="mentor1">Victor</option>
+              <option value="mentor1">Pedro</option>
+            </select>
+          </div>
+          <div class="input-wrapper">
+            <label for="feedback">Informações extras</label>
+            <textarea id="feedback" type="text"></textarea>
+          </div>
+          <div class="checkbox-wrapper">
+            <input id="event-private" type="checkbox" />
+            <label for="event-private"
+              >Todas as minhas dúvidas foram esclarecidas durante a
+              mentoria.</label
+            >
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Agendando próxima mentoria</legend>
+            <div class="mentory-wrapper">
+              <div class="input-wrapper">
+                <label for="date">Data <span>(DD/MM/AAAA)</span></label>
+                <input type="date" />
+              </div>
+              <div class="input-wrapper">
+                <label for="event-begin">Das</label>
+                <input type="time" id="event-begin" />
+              </div>
+              <div class="input-wrapper">
+                <label for="event-end">Até</label>
+                <input type="time" id="event-end" />
+              </div>
             </div>
-            <div class="checkbox-wrapper">
-              <input id="event-private" type="checkbox" />
-              <label for="event-private">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
-            </div>
-          </fieldset>
+          </div>
+        </fieldset>
+        
       </form>
     </div>
   </body>

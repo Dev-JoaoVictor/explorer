@@ -166,3 +166,24 @@ fieldset {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.fieldset-mentory legend {
+  font-size: 20px;
+  line-height: 34px;
+  margin-bottom: 8px;
+  padding: 0;
+  border: none;
+}
+
+.mentory-wrapper {
+  display: flex;
+  gap: 8px;
+}
+.mentory-wrapper > div:nth-child(1) {
+  width: 300px;
+  margin-right: 24px;
+}
+
+.mentory-wrapper > div {
+  width: 140px;
+}
