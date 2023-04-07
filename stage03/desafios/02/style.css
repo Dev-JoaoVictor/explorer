@@ -34,8 +34,11 @@ header img {
 }
 
 form {
-    padding: 31px 64px;
-    background-color: #fff;
+  padding: 31px 64px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .form-title {
@@ -70,6 +73,7 @@ fieldset {
 .input-wrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .input-wrapper label {
@@ -79,10 +83,27 @@ fieldset {
   margin-bottom: 8px;
 }
 
+.input-wrapper label span {
+  color: #C1BCCC;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+
 .input-wrapper input {
-    border: 1px solid #E6E6F0;
-    background: #FAFAFC;
-    height: 56px;
-    border-radius: 8px;
-    padding: 0 24px;
+  border: 1px solid #e6e6f0;
+  background: #fafafc;
+  height: 56px;
+  border-radius: 8px;
+  padding: 0 24px;
+}
+
+.fieldset-wrapper legend {
+  color: #253B51;
+  padding-bottom: 8px;
+  font-size: 24px;
+  font-family: "Staatliches", cursive;
+  font-weight: 400;
+  border-bottom: 1px solid #E6E6F0;
+  text-align: center;
 }
