@@ -18,8 +18,8 @@ body {
 }
 
 main {
-    max-width: 33.0rem;
-    margin: 0 auto;
+  max-width: 33rem;
+  margin: 0 auto;
 }
 
 h1 {
@@ -60,25 +60,47 @@ ul {
   margin-top: 7.2rem;
 }
 
-
-
 ul li {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 3.2rem;
   display: flex;
   gap: 3.8rem;
+  margin-bottom: 3.2rem;
 
   max-width: 25.7rem;
 }
 
-#first{
-    margin-right: 1.1rem;
+#first {
+  margin-right: 1.1rem;
 }
 
 li span {
   font-size: 7.2rem;
-  line-height: 8.0rem;
+  line-height: 8rem;
   font-weight: 800;
   letter-spacing: -2px;
+}
+
+/*Media queries*/
+@media (min-width: 700px) {
+  body {
+    padding: 8rem;
+  }
+  main {
+    max-width: 1020px;
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+  }
+  main > div {
+    max-width: 485px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+    margin-bottom: 3.2rem;
+  }
 }
