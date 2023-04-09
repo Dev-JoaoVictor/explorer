@@ -25,6 +25,16 @@ body {
   font-size: var(--fs-body);
 }
 
+.page {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 header {
   margin: 10rem 0 8rem;
   font-family: var(--ff-heading);
