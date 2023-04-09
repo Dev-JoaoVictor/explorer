@@ -54,3 +54,18 @@ header h1 {
   font-size: var(--fs-heading);
   line-height: 4.8rem;
 }
+
+.card {
+    position: relative;
+}
+
+.card img {
+    height: 41.6rem;
+    object-fit: cover;
+}
+
+.card h2 {
+    position: absolute;
+    bottom: 5.2rem;
+    left: 2.8rem;
+}
