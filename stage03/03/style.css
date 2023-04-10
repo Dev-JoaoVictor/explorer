@@ -38,6 +38,7 @@ img {
 header {
   margin: 10rem 0 8rem;
   text-align: center;
+  animation: topdown 1s backwards;
 }
 
 header p {
@@ -57,6 +58,8 @@ header h1 {
 main {
   display: grid;
   gap: 3.2rem;
+  margin-bottom: 100px;
+  animation: downtop 1s 350ms backwards;
 }
 
 .card {
@@ -68,18 +71,19 @@ main {
   object-fit: cover;
   border-radius: 6px;
   transition: all 200ms;
+  filter: brightness(0.5);
 }
 
 .card img:hover {
-  transform: scale(1.1);
-  opacity: 0.4;
+  transform: scale(1.05);
+  filter: brightness(1);
 }
 
 .card h2 {
   position: absolute;
   bottom: 5.2rem;
   left: 2.8rem;
-  font-size: var(--fs-heading);
+  font-size: 4rem;
   font-weight: 800;
   display: flex;
   flex-direction: column;
@@ -101,14 +105,6 @@ main {
   align-items: center;
 }
 
-header {
-    animation: topdown 1s  backwards;
-}
-
-main {
-    animation: downtop 1s 350ms backwards;
-}
-
 @keyframes topdown {
   0% {
     opacity: 0;
@@ -121,12 +117,45 @@ main {
 }
 
 @keyframes downtop {
-    0% {
-        opacity: 0;
-        transform: translatex(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translatex(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translatex(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@media (min-width: 930px) {
+  main {
+    grid-template-areas:
+      "A B B"
+      "C C D";
+  }
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+  main div:nth-child(2) {
+    grid-area: B;
+  }
+  main div:nth-child(3) {
+    grid-area: C;
+  }
+  main div:nth-child(4) {
+    grid-area: D;
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --fs-heading: 5.6rem;
+  }
+  .page {
+    max-width: 170rem;
+    padding: 0 5rem;
+  }
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
 }
