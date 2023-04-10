@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-header: "Staatliches", cursive;
+  --ff-text: "Palanquin", sans-serif;
+  --bg-header: #8e9aaf;
+  --bg-title-header: #CBC0D3;
+  --ft-color-header: #ffffff;
+
+}
+
+.page {
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  background-color: var(--bg-header);
+  padding-bottom: 3.5rem;
+}
+
+header img {
+  margin: 3.2rem 0 4rem;
+}
+
+header h1 {
+  font-family: var(--ff-header);
+  color: var(--ft-color-header);
+  background-color: var(--bg-title-header);
+  font-weight: 400;
+  font-size: 4rem;
+  padding: 8px 0;
+  line-height: 3.4rem;
+}
