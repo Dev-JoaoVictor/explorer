@@ -9,14 +9,14 @@
   --ff-header: "Staatliches", cursive;
   --ff-text: "Palanquin", sans-serif;
 
-  --bg-main: #EFF1FF;
+  --bg-main: #eff1ff;
   --bg-header: #8e9aaf;
   --bg-title-header: #cbc0d3;
-  --bg-tag: #FEEAFA;
+  --bg-tag: #feeafa;
 
   --ft-color-header: #ffffff;
   --ft-color-text: #23053a;
-  --ft-color-tag: #4A4E69;
+  --ft-color-tag: #4a4e69;
 }
 
 .page {
@@ -84,7 +84,7 @@ main p {
   border-radius: 2rem;
   letter-spacing: 0.05rem;
 
-  animation: topdown 1s 350ms  backwards;
+  animation: topdown 1s 350ms backwards;
 }
 
 .card img {
