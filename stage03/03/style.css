@@ -123,10 +123,10 @@ main {
 @keyframes downtop {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translatex(50px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translatex(0);
     }
 }
