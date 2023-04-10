@@ -9,9 +9,9 @@
   --ff-header: "Staatliches", cursive;
   --ff-text: "Palanquin", sans-serif;
   --bg-header: #8e9aaf;
-  --bg-title-header: #CBC0D3;
+  --bg-title-header: #cbc0d3;
   --ft-color-header: #ffffff;
-
+  --ft-color-text: #23053a;
 }
 
 .page {
@@ -36,4 +36,19 @@ header h1 {
   font-size: 4rem;
   padding: 8px 0;
   line-height: 3.4rem;
+}
+
+main {
+  display: grid;
+  padding: 1.4rem 3.2rem 6rem;
+}
+
+main p {
+  color: var(--ft-color-text);
+  font-family: var(--ff-text);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  margin-bottom: 6rem;
 }
