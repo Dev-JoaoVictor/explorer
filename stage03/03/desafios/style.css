@@ -8,10 +8,15 @@
   font-size: 62.5%;
   --ff-header: "Staatliches", cursive;
   --ff-text: "Palanquin", sans-serif;
+
+  --bg-main: #EFF1FF;
   --bg-header: #8e9aaf;
   --bg-title-header: #cbc0d3;
+  --bg-tag: #FEEAFA;
+
   --ft-color-header: #ffffff;
   --ft-color-text: #23053a;
+  --ft-color-tag: #4A4E69;
 }
 
 .page {
@@ -39,7 +44,12 @@ header h1 {
 }
 
 main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  background-color: var(--bg-main);
+
   padding: 1.4rem 3.2rem 6rem;
 }
 
@@ -50,5 +60,32 @@ main p {
   font-size: 1.5rem;
   line-height: 2rem;
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card span {
+  font-family: var(--ff-header);
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  font-size: 2rem;
+  color: var(--ft-color-tag);
+  background-color: var(--bg-tag);
+  padding: 1px 2.3rem;
+  line-height: 3.4rem;
+  border-radius: 2rem;
+  letter-spacing: 0.05rem;
+
+
+}
+
+.card img {
+  object-fit: cover;
+  border-radius: 2rem;
+  width: 100%;
+  height: auto;
 }
