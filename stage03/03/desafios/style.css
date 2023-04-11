@@ -29,6 +29,10 @@ header {
   padding-bottom: 3.5rem;
 }
 
+header p {
+  display: none;
+}
+
 header img {
   margin: 3.2rem 0 4rem;
 }
@@ -65,6 +69,9 @@ main p {
   margin-bottom: 3rem;
 
   animation: topdown 2s 350ms backwards;
+}
+footer p {
+  display: none;
 }
 
 .card {
@@ -115,4 +122,36 @@ main p {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@media (min-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "T T"
+    "A B"
+    "C D"
+    ;
+  }
+  main p {
+    grid-area: T;
+  }
+  main div:nth-child(2) {
+    grid-area: A;
+  }
+  main div:nth-child(3) {
+    grid-area: C;
+  }
+  main div:nth-child(4) {
+    grid-area: B;
+  }
+  main div:nth-child(5) {
+    grid-area: D;
+  }
+
+  header p {
+    display: none;
+  }
+    
 }
