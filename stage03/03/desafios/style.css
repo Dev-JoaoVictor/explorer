@@ -31,6 +31,10 @@ header {
 
 header p {
   display: none;
+  color: var(--ft-color-header);
+  font-size: 2.4rem;
+  line-height: 2rem;
+  margin-top: 3.2rem;
 }
 
 header img {
@@ -40,7 +44,6 @@ header img {
 header h1 {
   color: var(--ft-color-header);
   background-color: var(--bg-title-header);
-
   font-family: var(--ff-header);
   font-weight: 400;
   font-size: 4rem;
@@ -72,6 +75,13 @@ main p {
 }
 footer p {
   display: none;
+
+  font-family: var(--ff-footer);
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  background-color: var(--bg-main);
+
+  text-align: center;
 }
 
 .card {
@@ -102,6 +112,10 @@ footer p {
   animation: downup 0.7s backwards;
 }
 
+.plus {
+  display: none;
+}
+
 @keyframes topdown {
   0% {
     opacity: 0;
@@ -124,34 +138,33 @@ footer p {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   main {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-    "T T"
-    "A B"
-    "C D"
-    ;
+    grid-template-areas:
+      "T T"
+      "A B"
+      "C D";
   }
   main p {
     grid-area: T;
   }
-  main div:nth-child(2) {
+  main > div:nth-child(2) {
     grid-area: A;
   }
-  main div:nth-child(3) {
+  main > div:nth-child(3) {
     grid-area: C;
   }
-  main div:nth-child(4) {
+  main > div:nth-child(4) {
     grid-area: B;
   }
-  main div:nth-child(5) {
+  main > div:nth-child(5) {
     grid-area: D;
   }
-
-  header p {
-    display: none;
-  }
-    
 }
+
+@media (min-width: 1024px) {
+  
+}
+
+
