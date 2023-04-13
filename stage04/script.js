@@ -1,7 +1,8 @@
 /*
-    Pergunte o nome do usuário e escreva a mensage:
-    "Olá, [nome do usuário]"
+    Solicite 2 números, faça a soma deles e apresnete o resultado final ao usuário
 */
 
-let nome = prompt("Qual o seu nome?")
-alert(`Olá ${nome}`)
+let numOne = prompt("Digite o primeiro número: ");
+let numTwo = prompt("Digite o segundo número: ");
+let result = Number(numOne) + Number(numTwo);
+alert(`A soma dos números ${numOne} e ${numTwo} é: ${result} `)
