@@ -1,22 +1,18 @@
-/*
-    Capture 2 números e faça as operações matemáticas de: 
-    soma, subtração, divisão, multiplicação e resto da divisão!
- */
+let nome = prompt("Digite o seu nome: ");
+let mensage = alert(
+  `Olá ${nome}, a seguir digite as sua três notas para saber se você passou para o próximo bimestre, ok?`
+);
 
-let firstNumber = prompt("Digite o primeiro número: ");
-let secondNumber = prompt("Digite o segundo número: ");
+let noteOne = prompt("Digite a nota da primeira prova: ");
+let noteTwo = prompt("Digite a nota da segunda prova: ");
+let notethree = prompt("Digite a nota da terceira prova: ");
 
-firstNumber = Number(firstNumber);
-secondNumber = Number(secondNumber);
+let media = (Number(noteOne) + Number(noteTwo) + Number(notethree) ) / 3;
 
-const sum = firstNumber + secondNumber;
-const sub = firstNumber - secondNumber;
-const multi = firstNumber * secondNumber;
-const div = firstNumber / secondNumber;
-const rest = firstNumber % secondNumber;
+media - media.toFixed(2)
 
-alert("Soma: " + sum);
-alert("Subtração: " + sub);
-alert("multiplicação: " + multi);
-alert("Divisão: " + div);
-alert("Resto: " + rest);
+if( media > 6) {
+    alert(`Parabéns ${nome}, você obteve a média ${media} e passou para o próximo bimestre`)
+} else {
+    alert(`Puxa vida, ${nome} a sua média foi ${media}, infelizmente você não passou direto para o próximo bimestre, mas não desista você ainda tem a prova de recuperação!`)
+}
