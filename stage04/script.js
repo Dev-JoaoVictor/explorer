@@ -18,23 +18,23 @@ const patients = [
     height: 1.85,
   },
   {
-    name: "Carlos",
-    age: 18,
-    weight: 70,
-    height: 1.8,
+    name: "Pedro",
+    age: 20,
+    weight: 80,
+    height: 1.75,
   },
   {
-    name: "Pedro",
-    age: 22,
-    weight: 90,
-    height: 1.85,
+    name: "Paulo",
+    age: 18,
+    weight: 70,
+    height: 1.65,
   },
 ];
 
 let patientsName = []
 
-for (let patient of patients) {
-    patientsName.push(patient.name)
+for(let patient of patients) {
+    patientsName.push(`O paciente ${patient.name}, tem ${patient.age} anos, pesa ${patient.weight}kg e tem ${patient.height} de altura`)
 }
 
 alert(patientsName)
