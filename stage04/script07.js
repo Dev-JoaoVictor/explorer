@@ -33,15 +33,22 @@ while (option != 3) {
     )
   );
 
-  if (option == 1) {
-    let item = prompt("Digite o item: ");
-    items.push(item);
-  } else if (option == 2) {
-    if (items.length == 0) {
-      alert("Não existem itens cadastrados");
-    }
-    alert(items);
-  } else {
-    alert("Good Bye");
+  switch (option) {
+    case 1:
+      let item = prompt("Digite o item: ");
+      items.push(item);
+      break;
+    case 2:
+      if (items.length == 0) {
+        alert("Não existem itens cadastrados");
+      } else {
+        alert(items);
+      }
+      break;
+    case 3:
+      alert("Good Bye");
+      break
+    default:
+      alert("Opção inválida")
   }
 }
