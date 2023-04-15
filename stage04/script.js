@@ -1,40 +1,48 @@
 /* 
-  Crie uma lista de pacientes
+  Dada uma lista de pacientes, descubra o IMC de cada paciente e imprima
 
-  Cada paciente dentro da lista, deverá conter
-    nome
-    idade
-    peso
-    altura
+  "Paciente X possui o IMC de: Y"
 
-  Escreva uma lista contendo o nome dos pacientes
+  Onde X é o nome do paciente e Y é o IMC desse paciente
+
+  Crie uma função para fazer o cálculo de IMC
 */
+
+/* peso / (altura * altura) */
 
 const patients = [
   {
-    name: "João",
-    age: 22,
-    weight: 90,
-    height: 1.85,
-  },
-  {
-    name: "Pedro",
+    name: "Luiz",
     age: 20,
-    weight: 80,
-    height: 1.75,
+    weight: 100,
+    height: 190,
   },
   {
-    name: "Paulo",
-    age: 18,
+    name: "Alexandra",
+    age: 27,
     weight: 70,
-    height: 1.65,
+    height: 170,
+  },
+  {
+    name: "Carlos",
+    age: 42,
+    weight: 90,
+    height: 180,
   },
 ];
 
-let patientsName = []
-
-for(let patient of patients) {
-    patientsName.push(`O paciente ${patient.name}, tem ${patient.age} anos, pesa ${patient.weight}kg e tem ${patient.height} de altura`)
+function IMC(weight, height) {
+  return (weight / (height / 100) ** 2).toFixed(2);
 }
 
-alert(patientsName)
+for (let patient of patients) {
+  let IMCMessage = printPatientIMC(patient);
+  alert(IMCMessage);
+}
+
+function printPatientIMC(patient) {
+  return `Paciente ${patient.name} possui o de ${IMC(
+    patient.weight,
+    patient.height
+  )}`;
+}
