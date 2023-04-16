@@ -15,3 +15,9 @@ const listStudents = [
     secondTest: 6.2,
   },
 ];
+
+
+function media(firstTest, secondTest) {
+    let calcMedia = (firstTest + secondTest) / 2
+    return calcMedia
+}
