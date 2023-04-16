@@ -21,3 +21,9 @@ function media(firstTest, secondTest) {
     let calcMedia = (firstTest + secondTest) / 2
     return calcMedia
 }
+
+for(student of listStudents) {
+    let mediaStudent = media(student.firstTest, student.secondTest)
+    let aproved = mediaStudent > 7 ? "Você está aprovado!" : 'Você está reprovado!'
+    alert(`A média do aluno ${student.name} foi de ${mediaStudent}, ${aproved}`)
+}
