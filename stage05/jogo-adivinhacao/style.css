@@ -52,4 +52,28 @@ p {
 
 form {
   margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+input, button {
+    border: none;
+    padding: 1.6rem;
+}
+
+input {
+    background-color: #DCE2E9;
+    width: 5rem;
+    border-radius: .4rem 0 0 .4rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+button {
+    background-color: #7879F1;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    border-radius: 0 .4rem .4rem 0;
 }
