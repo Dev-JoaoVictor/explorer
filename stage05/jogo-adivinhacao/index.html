@@ -8,16 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo da adivinhação</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
-      <h1>Jogo da Adivinhação</h1>
-      <p>Adivinhe um número entre 0 e 10</p>
-      <form action="">
-        <input type="text" />
-        <button>Tentar</button>
-      </form>
+      <div class="screen1 hide">
+        <h1>Jogo da Adivinhação</h1>
+        <p>Adivinhe um número entre 0 e 10</p>
+        <form action="">
+          <input type="text" />
+          <button>Tentar</button>
+        </form>
+      </div>
+      <div class="screen2">
+        <h2>Acertou em 3 vezes</h2>
+        <button>Jogar novamente</button>
+      </div>
     </main>
   </body>
 </html>
