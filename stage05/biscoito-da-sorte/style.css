@@ -25,6 +25,10 @@ main {
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
 }
 
+.hide {
+    display: none;
+}
+
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -48,6 +52,18 @@ p {
   transition: ease 300ms;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
