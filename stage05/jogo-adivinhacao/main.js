@@ -4,17 +4,12 @@ const screen2 = document.querySelector(".screen2");
 const btnTry = document.querySelector("#btnTry");
 const btnReset = document.querySelector("#btnReset");
 let randomNumber = Math.round(Math.random() * 10);
-console.log(randomNumber);
 let xAttempts = 1;
 
 //Eventos
 btnTry.addEventListener("click", handleTryClick);
 btnReset.addEventListener("click", handleResetClick);
-document.addEventListener("keydown", function (e) {
-  if (e.key == "Enter" && screen1.classList.contains("hide")) {
-    handleResetClick();
-  }
-});
+document.addEventListener("keydown", handlePressKey);
 
 //Funções
 function handleTryClick(event) {
@@ -57,5 +52,11 @@ function inputValue() {
   if (inputNumber.value == "") {
     alert("Insira um número");
     xAttempts = 1;
+  }
+}
+
+function handlePressKey(e) {
+  if (e.key == "Enter" && screen1.classList.contains("hide")) {
+    handleResetClick();
   }
 }
