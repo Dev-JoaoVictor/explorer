@@ -4,6 +4,7 @@ const screen2 = document.querySelector(".screen2");
 const btnTry = document.querySelector("#btnTry");
 const btnReset = document.querySelector("#btnReset");
 let randomNumber = Math.round(Math.random() * 10);
+console.log(randomNumber);
 let xAttempts = 1;
 
 //Eventos
@@ -20,6 +21,7 @@ function handleTryClick(event) {
   event.preventDefault(); /* Tira o recarregamento automático da página */
   const inputNumber = document.querySelector("#inputNumber");
   numberVerification();
+  inputValue();
 
   if (Number(inputNumber.value) == randomNumber) {
     toggleScreen();
@@ -47,6 +49,13 @@ function toggleScreen() {
 function numberVerification() {
   if (Number(inputNumber.value) < 0 || Number(inputNumber.value) > 10) {
     alert("Digite um número entre 0 e 10");
+    xAttempts = 1;
+  }
+}
+
+function inputValue() {
+  if (inputNumber.value == "") {
+    alert("Insira um número");
     xAttempts = 1;
   }
 }
