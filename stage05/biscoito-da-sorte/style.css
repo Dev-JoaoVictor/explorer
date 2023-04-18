@@ -25,9 +25,7 @@ main {
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
 }
 
-.hide {
-    display: none;
-}
+/*Screen 1*/
 
 h1 {
   font-family: "Montserrat", sans-serif;
@@ -37,7 +35,8 @@ h1 {
   margin: 4.8rem 0 1.4rem;
 }
 
-p {
+p,
+button {
   font-family: "DM Sans", sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -53,28 +52,101 @@ p {
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
   }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/*Screen 2*/
+
+.screen2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen2 p {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 2.4rem;
+  background-color: #e4edf1;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+  width: 29.3rem;
+  animation: toFadeIn 2s;
+}
+
+.screen2 img {
+  margin: 6rem 0;
+  animation: fade 2s;
+  transition: ease-in-out 1s;
+}
+
+.screen2 button {
+  padding: 1.6rem;
+  margin-bottom: 4.8rem;
+
+  border: none;
+  color: #ffff;
+  font-weight: 700;
+  border-radius: 0.4rem;
+  background-color: #ff9500;
+}
+
+.screen2 button:hover {
+  cursor: pointer;
+  background-color: #d6830f;
+}
+
+@keyframes toFadeIn {
+  0% {
+    transform: translateY(150px) scale(0.1);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.hide {
+  display: none;
+}
