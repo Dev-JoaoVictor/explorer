@@ -17,3 +17,23 @@ const messages = [
     "Realize o óbvio, pense no improvável e conquiste o impossível.",
     "O Palmeiras não tem mundial"
 ]
+
+biscoito.addEventListener("click", handleTryClick)
+reset.addEventListener("click", toggleScreen)
+
+function handleTryClick() {
+    toggleScreen()
+    clickBiscoito()
+}
+
+function clickBiscoito() {
+    const allMessages = messages.length
+    let randomMessage = Math.floor(Math.random() * allMessages)
+    message.innerText = `${messages[randomMessage]}`
+}
+
+
+function toggleScreen(){
+    screen1.classList.toggle('hide')
+    screen2.classList.toggle('hide')
+}
