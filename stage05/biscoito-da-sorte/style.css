@@ -24,3 +24,29 @@ main {
   border-radius: 0.5rem;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
 }
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  margin: 4.8rem 0 1.4rem;
+}
+
+p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.biscoito {
+  margin-bottom: 6.4rem;
+}
+.biscoito:hover {
+  animation: shake 0.5s infinite;
+  transition: ease 300ms;
+  cursor: pointer;
+}
+
+
