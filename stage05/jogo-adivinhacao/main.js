@@ -9,16 +9,20 @@ let xAttempts = 1;
 //Eventos
 btnTry.addEventListener("click", handleTryClick);
 btnReset.addEventListener("click", handleResetClick);
-document.addEventListener('keydown', function(e) {
-  if(e.key == 'Enter' && screen1.classList.contains('hide')) {
-    handleResetClick()
+document.addEventListener("keydown", function (e) {
+  if (e.key == "Enter" && screen1.classList.contains("hide")) {
+    handleResetClick();
   }
-})
+});
 
 //Funções
 function handleTryClick(event) {
   event.preventDefault(); /* Tira o recarregamento automático da página */
   const inputNumber = document.querySelector("#inputNumber");
+
+  if(Number(inputNumber.value) < 0 || Number(inputNumber.value) > 10){
+    alert("Digite um número entre 0 e 10")
+  }
 
   if (Number(inputNumber.value) == randomNumber) {
     toggleScreen();
