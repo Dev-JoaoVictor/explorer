@@ -23,6 +23,8 @@
 
   --bg-error: #f03e3e;
   --fc-error: #ffffff;
+
+  --bg-modal: rgba(0, 0, 0, 0.7)
 }
 
 body {
@@ -30,6 +32,8 @@ body {
   background-color: #040924;
   font-family: "Roboto", sans-serif;
 }
+
+/*Formulário*/
 
 .container {
   display: grid;
@@ -91,7 +95,7 @@ form input::placeholder {
   color: var(--fc-placeholder);
 }
 
-button {
+form button {
   display: flex;
   gap: 0.8rem;
   align-items: center;
@@ -112,7 +116,46 @@ button {
   transition: background ease 0.2s;
 }
 
-button:hover {
+form button:hover {
   cursor: pointer;
   background-color: var(--bg-button-hover);
+}
+
+/*Modal*/
+
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+  transition: ease .5s;
+
+}
+
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-modal);
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.modal button:hover {
+  transform: scale(1.1);
 }
