@@ -1,30 +1,46 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    font-size: 62.5%;
+  font-size: 62.5%;
+
+  /*Cores*/
+  --fc-header: #0c3440;
+  
+  --fc-label: #00453a;
+  --fc-input: #212529;
+  --ot-input: #02799d;
+  --bd-input: rgba(73, 80, 87, 0.3);
+  --fc-placeholder: rgba(73, 80, 87, 0.5);
+
+  --fc-button: #ffffff;
+  --bg-button: #02799d;
+
+  --bg-error: #F03E3E;
+  --fc-error: #ffffff;
 }
 
 body {
-    background-color: #040924;
-    font-size: 1.6rem;
+  font-size: 1.6rem;
+  background-color: #040924;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
-    display: grid;
-    height: 100vh;
-    place-content: center;
+  display: grid;
+  height: 100vh;
+  place-content: center;
 }
 
 .card {
-    padding: 4.8rem 6.4rem 6.4rem;
-    background-color: #FFFFFF;
-    max-width: 42.8rem;
-    margin-inline: auto;
-    box-shadow: 0px .2rem .4rem rgba(0, 0, 0, 0.1);
-    
-    border-radius: .6rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+  background-color: #ffffff;
+  max-width: 42.8rem;
+  margin-inline: auto;
+  box-shadow: 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+
+  border-radius: 0.6rem;
 }
