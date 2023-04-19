@@ -19,6 +19,7 @@
 
   --fc-button: #ffffff;
   --bg-button: #02799d;
+  --bg-button-hover: #0d5e77;
 
   --bg-error: #f03e3e;
   --fc-error: #ffffff;
@@ -46,8 +47,13 @@ body {
   border-radius: 0.6rem;
 }
 
+form {
+  width: 30rem;
+}
+
 form h1 {
   margin-bottom: 3.2rem;
+  text-align: center;
 }
 
 .title {
@@ -103,10 +109,10 @@ button {
   border: none;
   border-radius: 0.4rem;
   background-color: var(--bg-button);
-  transition: ease 0.2s;
+  transition: background ease 0.2s;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #0d5e77;
+  background-color: var(--bg-button-hover);
 }
