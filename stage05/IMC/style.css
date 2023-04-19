@@ -9,17 +9,18 @@
 
   /*Cores*/
   --fc-header: #0c3440;
-  
+
   --fc-label: #00453a;
   --fc-input: #212529;
   --ot-input: #02799d;
+  --bg-input: #dce2e9;
   --bd-input: rgba(73, 80, 87, 0.3);
   --fc-placeholder: rgba(73, 80, 87, 0.5);
 
   --fc-button: #ffffff;
   --bg-button: #02799d;
 
-  --bg-error: #F03E3E;
+  --bg-error: #f03e3e;
   --fc-error: #ffffff;
 }
 
@@ -43,4 +44,69 @@ body {
   box-shadow: 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 
   border-radius: 0.6rem;
+}
+
+form h1 {
+  margin-bottom: 3.2rem;
+}
+
+.title {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: var(--fc-header);
+}
+
+label {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--fc-label);
+  margin-bottom: 0.8rem;
+}
+
+form input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--bd-input);
+  border-radius: 0.4rem;
+  color: var(--fc-input);
+  padding: 1.6rem;
+  width: 100%;
+  margin-top: 0.8rem;
+}
+
+form input:hover {
+  outline: 2px solid var(--ot-input);
+}
+
+.input-wrapper + .input-wrapper {
+  margin-top: 1.6rem;
+}
+
+form input::placeholder {
+  color: var(--fc-placeholder);
+}
+
+button {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 1.6rem;
+  margin-top: 3.2rem;
+
+  color: var(--fc-button);
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+
+  border: none;
+  border-radius: 0.4rem;
+  background-color: var(--bg-button);
+  transition: ease 0.2s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #0d5e77;
 }
