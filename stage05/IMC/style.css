@@ -169,6 +169,38 @@ form button:hover {
   justify-content: center;
   margin-bottom: 2rem;
 }
+/*Table IMC*/
+
+.tables {
+  display: flex;
+  text-align: center;
+  color: var(--fc-error);
+  background-color: #4f7c8a;
+  width: max-content;
+  border-radius: .4rem;
+}
+
+.table {
+  padding: 3rem;
+}
+
+.table tbody {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+
+.table tbody tr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: .6rem;
+  border-radius: .4rem;
+  border: 1px solid white;
+  
+}
 
 /*Alert error*/
 .alert-error.open {
