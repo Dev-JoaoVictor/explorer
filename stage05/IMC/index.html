@@ -15,9 +15,7 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <div class="alert-error open">
-        Digite somente números
-    </div>
+    <div class="alert-error open">Digite somente números</div>
     <div class="container">
       <main class="card">
         <form action="">
@@ -37,15 +35,71 @@
         </form>
       </main>
     </div>
-    <div class="modal-wrapper">
-        <div class="modal card">
-            <h2 class="title">
-                <button class="close">
-                    <img src="assets/close.svg" alt="Imagem para fechar o modal">
-                </button>
-                <span>Seu IMC é de 28</span>
-            </h2>
+    <div class="modal-wrapper open">
+      <div class="modal card">
+        <h2 class="title">
+          <button class="close">
+            <img src="assets/close.svg" alt="Imagem para fechar o modal" />
+          </button>
+          <span>Seu IMC é de 28</span>
+        </h2>
+        <div class="tables">
+          <table class="table imc">
+            <thead>
+              <tr>
+                <th>IMC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Menor que 18,5</td>
+              </tr>
+              <tr>
+                <td>18,6 - 24,9</td>
+              </tr>
+              <tr>
+                <td>25 - 29,9</td>
+              </tr>
+              <tr>
+                <td>30 - 34,9</td>
+              </tr>
+              <tr>
+                <td>35 - 39,9</td>
+              </tr>
+              <tr>
+                <td>Acima de 40</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Classificação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Abaixo do peso</td>
+              </tr>
+              <tr>
+                <td>Peso ideal</td>
+              </tr>
+              <tr>
+                <td>Sobrepeso</td>
+              </tr>
+              <tr>
+                <td>Obesidade Grau I</td>
+              </tr>
+              <tr>
+                <td>Obesidade Grau II</td>
+              </tr>
+              <tr>
+                <td>Obesidade Grau II (Morbidá)</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </div>
   </body>
 </html>

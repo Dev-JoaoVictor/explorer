@@ -141,8 +141,12 @@ form button:hover {
   visibility: hidden;
 }
 
-.modal {
+.modal{
   position: relative;
+}
+
+.modal.card {
+  max-width: max-content;
 }
 
 .modal button {
@@ -158,6 +162,12 @@ form button:hover {
 
 .modal button:hover {
   transform: scale(1.1);
+}
+
+.title span {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 /*Alert error*/
