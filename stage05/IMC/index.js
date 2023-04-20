@@ -4,6 +4,20 @@ const form = document.querySelector("form");
 let inputWeight = document.querySelector("#weight");
 let inputHeight = document.querySelector("#height");
 
+const table = {
+  tableIMC: document.querySelector(".table tbody tr"),
+  tableClass: document.querySelector(".table tr"),
+
+  checkIMC() {
+    table.tableIMC.classList.add("check");
+  },
+  checkTable() {
+    table.tableClass.classList.add("check");
+  },
+};
+
+teste = console.log(table.tableIMC)
+
 const modal = {
   wrapper: document.querySelector(".modal-wrapper"),
   message: document.querySelector(".modal .title span"),
@@ -29,6 +43,11 @@ form.onsubmit = (event) => {
 
   modal.message.innerText = message;
   modal.open();
+
+  if (result == 25) {
+    table.checkIMC()
+    table.checkClass()
+  }
 };
 
 function IMC(weight, height) {
