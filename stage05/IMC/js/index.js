@@ -7,6 +7,9 @@ const form = document.querySelector("form");
 export let inputWeight = document.querySelector("#weight");
 export let inputHeight = document.querySelector("#height");
 
+inputHeight.oninput = () => AlertError.close()
+inputWeight.oninput = () => AlertError.close()
+
 //Funções
 form.onsubmit = (event) => {
   event.preventDefault(); // Tira o recarregamento da página
@@ -34,5 +37,6 @@ function displayResultMessage(result) {
   modal.message.innerText = message;
   modal.open();
 }
+
 
 
