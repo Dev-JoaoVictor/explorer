@@ -11,14 +11,22 @@ export const modal = {
   close() {
     modal.wrapper.classList.remove("open");
   },
+  reset() {
+    inputHeight.value = "";
+    inputWeight.value = "";
+  }
 };
 
 modal.buttonClose.onclick = () => {
   modal.close();
-  resetForm();
+  modal.reset();
 };
 
-function resetForm() {
-  inputHeight.value = "";
-  inputWeight.value = "";
+window.addEventListener('keydown', handleKeydown)
+
+function handleKeydown(event) {
+  if(event.key == 'Escape') {
+    modal.close()
+    modal.reset()
+  }
 }
