@@ -18,12 +18,20 @@ body {
   background: var(--bg-body);
   color: var(--text-color);
   font-family: "Roboto", sans-serif;
+  display: grid;
+  min-height: 100vh; 
+}
+
+main{
+  align-self: end;
+  justify-self: center;
 }
 
 .timer {
   display: flex;
   font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
   align-items: center;
+  margin-bottom: 1.6rem;
 }
 
 .controls {
@@ -50,4 +58,10 @@ button svg {
 
 .hide {
   display: none;
+}
+
+footer {
+  align-self: end;
+  justify-self: end;
+  padding: 0 4rem 3.2rem;
 }
