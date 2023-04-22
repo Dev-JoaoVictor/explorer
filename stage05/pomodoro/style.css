@@ -6,9 +6,11 @@
 
 :root {
   font-size: 62.5%;
-
   --bg-body: #121214;
-  --primary-color: #42d3ff;
+
+  --base-color: 194;
+  --bg-controls: hsla(var(--base-color), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--base-color), 100%, 63%);
   --text-color: #ffffff;
 }
 
@@ -22,6 +24,15 @@ body {
   display: flex;
   font-size: 8.8rem;
   align-items: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--bg-controls);
+  border-radius: 9999px;
 }
 
 button {
