@@ -18,3 +18,8 @@ body {
   font-family: 'Roboto', sans-serif;
 } 
 
+.timer {
+  display: flex;
+  font-size: 8.8rem;
+  align-items: center;
+}
