@@ -29,3 +29,7 @@ button {
   border: none;
   cursor: pointer;
 }
+
+.hide {
+  display: none;
+}
