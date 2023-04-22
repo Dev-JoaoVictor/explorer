@@ -22,7 +22,7 @@ body {
 
 .timer {
   display: flex;
-  font-size: 8.8rem;
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
   align-items: center;
 }
 
@@ -33,12 +33,19 @@ body {
 
   background-color: var(--bg-controls);
   border-radius: 9999px;
+  gap: 3.2rem;
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem + 10vw, 10.8rem);
 }
 
 button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+button svg {
+  width: clamp(3.2rem,2rem + 12vw,6.4rem);
 }
 
 .hide {
