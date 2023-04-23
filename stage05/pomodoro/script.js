@@ -43,7 +43,7 @@ function soundCheck() {
 
 function setTime() {
   minutes = prompt("Quantos minutos? ");
-  minutesDisplay.textContent = String(minutes).padStart(2, "0");
+  updateTimerDisplay(minutes, 0);
 }
 
 function countdown() {
@@ -51,18 +51,25 @@ function countdown() {
     let seconds = Number(secondsDisplay.textContent);
     let minutes = Number(minutesDisplay.textContent);
 
+    updateTimerDisplay(minutes, 0);
+
     if (minutes <= 0) {
-      resetControls()
+      resetControls();
       return;
     }
 
     if (seconds <= 0) {
       seconds = 2;
-      minutesDisplay.textContent =String( minutes - 1).padStart(2, "0");
+      --minutes;
     }
 
-    secondsDisplay.textContent = String(seconds - 1).padStart(2, "0");
+    updateTimerDisplay(minutes, String(seconds - 1));
 
     countdown();
   }, 1000);
+}
+
+function updateTimerDisplay(minutes, seconds) {
+  minutesDisplay.textContent = String(minutes).padStart(2, "0");
+  secondsDisplay.textContent = String(seconds).padStart(2, "0");
 }
