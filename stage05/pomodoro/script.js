@@ -6,7 +6,8 @@ const buttonSoundOn = document.querySelector(".sound-on");
 const buttonSoundOff = document.querySelector(".sound-off");
 const minutesDisplay = document.querySelector(".minutes");
 const secondsDisplay = document.querySelector(".seconds");
-let minutes;
+let minutes = Number(minutesDisplay.textContent)
+let timerTimeOut;
 
 buttonPlay.addEventListener("click", start);
 buttonPause.addEventListener("click", pause);
@@ -27,6 +28,7 @@ function start() {
 function pause() {
   buttonPause.classList.add("hide");
   buttonPlay.classList.remove("hide");
+  clearTimeout(timerTimeOut)
 }
 
 function resetControls() {
@@ -34,6 +36,7 @@ function resetControls() {
   buttonPause.classList.add("hide");
   buttonSet.classList.remove("hide");
   buttonStop.classList.add("hide");
+  resetTimer()
 }
 
 function soundCheck() {
@@ -42,12 +45,24 @@ function soundCheck() {
 }
 
 function setTime() {
-  minutes = prompt("Quantos minutos? ") || 0
+  let newMinutes = prompt("Quantos minutos? ")
+  if(!newMinutes){
+    resetTimer()
+    return
+  }
+
+  minutes = newMinutes
   updateTimerDisplay(minutes, 0);
 }
 
+function resetTimer(){
+  updateTimerDisplay(minutes, 0)
+  clearTimeout(timerTimeOut)
+
+}
+
 function countdown() {
-  setTimeout(function () {
+  timerTimeOut = setTimeout(function () {
     let seconds = Number(secondsDisplay.textContent);
     let minutes = Number(minutesDisplay.textContent);
 
@@ -59,7 +74,7 @@ function countdown() {
     }
 
     if (seconds <= 0) {
-      seconds = 2;
+      seconds = 60;
       --minutes;
     }
 
