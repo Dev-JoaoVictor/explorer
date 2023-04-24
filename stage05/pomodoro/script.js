@@ -42,7 +42,7 @@ function soundCheck() {
 }
 
 function setTime() {
-  minutes = prompt("Quantos minutos? ");
+  minutes = prompt("Quantos minutos? ") || 0
   updateTimerDisplay(minutes, 0);
 }
 
