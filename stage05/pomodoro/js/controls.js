@@ -1,29 +1,49 @@
-import { resetTimer, countdown } from './timer'
+export function Controls({
+  buttonPause,
+  buttonPlay,
+  buttonSet,
+  buttonStop,
+  buttonSoundOn,
+  buttonSoundOff,
+}) {
+  function play() {
+    buttonPlay.classList.add("hide");
+    buttonPause.classList.remove("hide");
+    buttonSet.classList.add("hide");
+    buttonStop.classList.remove("hide");
+  }
 
-export function resetControls() {
-  buttonPlay.classList.remove("hide");
-  buttonPause.classList.add("hide");
-  buttonSet.classList.remove("hide");
-  buttonStop.classList.add("hide");
-  resetTimer()
-}
+  function pause() {
+    buttonPause.classList.add("hide");
+    buttonPlay.classList.remove("hide");
+  }
 
-export function start() {
-  buttonPlay.classList.add("hide");
-  buttonPause.classList.remove("hide");
-  buttonSet.classList.add("hide");
-  buttonStop.classList.remove("hide");
+  function soundCheck() {
+    buttonSoundOff.classList.toggle("hide");
+    buttonSoundOn.classList.toggle("hide");
+  }
 
-  countdown();
-}
+  function getMinutes() {
+    let newMinutes = prompt("Quantos minutos? ");
+    if (!newMinutes) {
+      return false;
+    }
 
-export function pause() {
-  buttonPause.classList.add("hide");
-  buttonPlay.classList.remove("hide");
-  clearTimeout(timerTimeOut)
-}
+    return newMinutes;
+  }
 
-export function soundCheck() {
-  buttonSoundOff.classList.toggle("hide");
-  buttonSoundOn.classList.toggle("hide");
+  function reset() {
+    buttonPlay.classList.remove("hide");
+    buttonPause.classList.add("hide");
+    buttonSet.classList.remove("hide");
+    buttonStop.classList.add("hide");
+  }
+
+  return {
+    play,
+    pause,
+    reset,
+    getMinutes,
+    soundCheck,
+  };
 }
