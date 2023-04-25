@@ -27,19 +27,24 @@ const timer = Timer({
   resetControls: controls.reset,
 });
 
+const sound = Sound()
+
 buttonPlay.addEventListener("click", () => {
   controls.play();
   timer.countdown();
+  sound.pressButton()
 });
 
 buttonPause.addEventListener("click", () => {
   controls.pause();
   timer.hold();
+  sound.pressButton()
 });
 
 buttonStop.addEventListener("click", () => {
   controls.reset();
   timer.reset();
+  sound.pressButton()
 });
 
 buttonSet.addEventListener("click", () => {
@@ -56,8 +61,10 @@ buttonSet.addEventListener("click", () => {
 
 buttonSoundOn.addEventListener("click", () => {
   controls.soundCheck();
+  sound.bgAudio.play()
 });
 
 buttonSoundOff.addEventListener("click", () => {
   controls.soundCheck();
+  sound.bgAudio.pause()
 });
