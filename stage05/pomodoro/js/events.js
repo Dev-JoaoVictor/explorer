@@ -40,11 +40,11 @@ export default function ({ controls, timer, sound }) {
 
   buttonSoundOn.addEventListener("click", () => {
     controls.soundCheck();
-    sound.bgAudio.play();
+    sound.bgAudio.pause();
   });
-
+  
   buttonSoundOff.addEventListener("click", () => {
     controls.soundCheck();
-    sound.bgAudio.pause();
+    sound.bgAudio.play();
   });
 }
