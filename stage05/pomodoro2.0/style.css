@@ -93,12 +93,11 @@ button {
   height: 15.2rem;
   background: var(--bg-card);
   border-radius: 2.4rem;
-  
+  cursor: pointer;
 }
 
 svg, path {
   margin-top: 2.4rem;
-  cursor: pointer;
   fill: var(--svg-color);
   
 }
