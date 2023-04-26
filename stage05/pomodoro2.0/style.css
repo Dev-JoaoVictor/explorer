@@ -5,10 +5,107 @@
 }
 
 :root {
+  font-size: 62.5%;
   --bg-body: #E5E5E5;
+  --bg-card: #E1E1E6;
+  --bg-card-select: #02799D;
+
+  --timer-color: #323238;
+
+  --svg-color: #323238;
+  --svg-color-select: #FFFFFF;
+}
+
+.dark {
+
+  --bg-body: #121214;
+  --bg-card: #29292E;
+  --bg-card-select: #0A3442;   
+  
+  --timer-color: #FFFFFF;
+
+  --svg-color:#C4C4CC38;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   background: var(--bg-body);
+  display: grid;
+  height: 100vh;
+}
+
+body img {
+  align-self: flex-start;
+  justify-self: end;
+  margin: 6rem 6rem 0 0;
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+
+main {
+  display: flex;
+  align-self: baseline;
+  gap: 19.2rem;
+  max-height: 33.6rem;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  display: grid;
+  gap: 4.8rem;
+}
+
+.timer {
+  color: var(--timer-color);
+  display: flex;
+  font-size: 12.6rem;
+}
+
+.controls {
+
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  text-align: center;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  text-align: center;
+  width: 13.8rem;
+  height: 15.2rem;
+  background: var(--bg-card);
+  border-radius: 2.4rem;
+  
+}
+
+svg, path {
+  margin-top: 2.4rem;
+  cursor: pointer;
+  fill: var(--svg-color);
+  
+}
+
+.card.select {
+  background: var(--bg-card-select);
+}
+
+.select path  {
+  fill: var(--svg-color-select);
 }
