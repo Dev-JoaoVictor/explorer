@@ -1,15 +1,12 @@
-const sun = document.querySelector('.sun')
-const moon = document.querySelector('.moon')
-const darkmode = document.documentElement
+const sun = document.querySelector(".sun");
+const moon = document.querySelector(".moon");
+const theme = document.documentElement;
 
-sun.addEventListener('click', () => {
+sun.addEventListener('click', Toggle)
+moon.addEventListener('click', Toggle)
+
+function Toggle() {
   sun.classList.toggle('hide')
   moon.classList.toggle('hide')
-  darkmode.classList.toggle('dark')
-})
-
-moon.addEventListener('click', () => {
-  sun.classList.toggle('hide')
-  moon.classList.toggle('hide')
-  darkmode.classList.toggle('dark')
-})
+  theme.classList.toggle('dark')
+}
