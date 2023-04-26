@@ -17,7 +17,7 @@
 }
 
 .dark {
-
+  
   --bg-body: #121214;
   --bg-card: #29292E;
   --bg-card-select: #0A3442;   
@@ -28,6 +28,7 @@
 }
 
 body {
+  transition:  0.3s ease;
   font-family: 'Roboto', sans-serif;
   background: var(--bg-body);
   display: grid;
