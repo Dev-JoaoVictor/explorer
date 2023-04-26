@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-body: #E5E5E5;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-body);
+}
