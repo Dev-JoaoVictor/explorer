@@ -6,30 +6,29 @@
 
 :root {
   font-size: 62.5%;
-  --bg-body: #E5E5E5;
-  --bg-card: #E1E1E6;
-  --bg-card-select: #02799D;
+  --bg-body: #e5e5e5;
+  --bg-card: #e1e1e6;
+  --bg-card-select: #02799d;
 
   --timer-color: #323238;
 
   --svg-color: #323238;
-  --svg-color-select: #FFFFFF;
+  --svg-color-select: #ffffff;
 }
 
 .dark {
-  
   --bg-body: #121214;
-  --bg-card: #29292E;
-  --bg-card-select: #0A3442;   
-  
-  --timer-color: #FFFFFF;
+  --bg-card: #29292e;
+  --bg-card-select: #0a3442;
 
-  --svg-color:#C4C4CC38;
+  --timer-color: #ffffff;
+
+  --svg-color: #c4c4cc38;
 }
 
 body {
-  transition:  0.3s ease;
-  font-family: 'Roboto', sans-serif;
+  transition: 0.3s ease;
+  font-family: "Roboto", sans-serif;
   background: var(--bg-body);
   display: grid;
   height: 100vh;
@@ -42,7 +41,7 @@ body img {
   cursor: pointer;
 }
 
-.hide{
+.hide {
   display: none;
 }
 
@@ -53,7 +52,6 @@ main {
   max-height: 33.6rem;
   justify-content: center;
   align-items: center;
-
 }
 
 .container {
@@ -68,7 +66,6 @@ main {
 }
 
 .controls {
-
   display: flex;
   align-items: center;
   gap: 4rem;
@@ -96,16 +93,14 @@ button {
   cursor: pointer;
 }
 
-svg, path {
+svg,
+path {
   margin-top: 2.4rem;
   fill: var(--svg-color);
-  
 }
 
-.card.select {
+.card.select,
+.select path {
   background: var(--bg-card-select);
-}
-
-.select path  {
   fill: var(--svg-color-select);
 }
