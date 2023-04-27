@@ -1,17 +1,12 @@
+import { Theme } from "./theme.toggle.js";
+
 const sun = document.querySelector(".sun");
 const moon = document.querySelector(".moon");
-const theme = document.documentElement;
 
-sun.addEventListener("click", ToggleTheme);
-moon.addEventListener("click", ToggleTheme);
+const configTheme = Theme({
+  sun,
+  moon,
+});
 
-export function ToggleTheme() {
-  sun.classList.toggle("hide");
-  moon.classList.toggle("hide");
-  theme.classList.toggle("dark");
-}
-
-const cardList = document.querySelector(".container-cards");
-const card = cardList.querySelectorAll('.card')
-
-
+sun.addEventListener("click", configTheme.ToggleTheme);
+moon.addEventListener("click", configTheme.ToggleTheme);
