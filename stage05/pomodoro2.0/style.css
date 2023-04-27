@@ -12,6 +12,9 @@
   --bg-slider-volume: #323238;
   --bg--button-volume: #323238;
 
+  --bg-slider-select: #ffffff;
+  --bg-button-select: #ffffff;
+
   --timer-color: #323238;
 
   --svg-color: #323238;
@@ -82,7 +85,7 @@ button {
   cursor: pointer;
 }
 
-.cards {
+.container-cards {
   display: grid;
   gap: 3.2rem;
   grid-template-columns: repeat(2, 1fr);
@@ -129,9 +132,9 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .card.select input[type="range"] {
-  background: #ffffff;
+  background: var(--bg-button-select);
 }
 
 .card.select input[type="range"]::-webkit-slider-thumb {
-  background: #ffffff;
+  background: var(--bg-slider-select);
 }
