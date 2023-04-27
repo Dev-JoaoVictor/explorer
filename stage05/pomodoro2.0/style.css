@@ -9,6 +9,8 @@
   --bg-body: #e5e5e5;
   --bg-card: #e1e1e6;
   --bg-card-select: #02799d;
+  --bg-slider-volume: #323238;
+  --bg--button-volume: #323238;
 
   --timer-color: #323238;
 
@@ -20,6 +22,8 @@
   --bg-body: #121214;
   --bg-card: #29292e;
   --bg-card-select: #0a3442;
+  --bg-slider-volume: #ffffff;
+  --bg--button-volume: #ffffff;
 
   --timer-color: #ffffff;
 
@@ -91,6 +95,8 @@ button {
   background: var(--bg-card);
   border-radius: 2.4rem;
   cursor: pointer;
+  display: grid;
+  justify-items: center;
 }
 
 svg,
@@ -103,4 +109,29 @@ path {
 .select path {
   background: var(--bg-card-select);
   fill: var(--svg-color-select);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: var(--bg-slider-volume);
+  border-radius: 5px;
+  height: 4px;
+  outline: none;
+  width: 9rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--bg--button-volume);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.card.select input[type="range"] {
+  background: #ffffff;
+}
+
+.card.select input[type="range"]::-webkit-slider-thumb {
+  background: #ffffff;
 }
