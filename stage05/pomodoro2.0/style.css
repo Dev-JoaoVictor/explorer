@@ -115,7 +115,7 @@ path {
 }
 
 input[type="range"] {
-  -webkit-appearance: none;
+  appearance: none;
   background: var(--bg-slider-volume);
   border-radius: 5px;
   height: 4px;
