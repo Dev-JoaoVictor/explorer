@@ -7,10 +7,16 @@ const buttonAnyLess = document.querySelector(".anyLess");
 let timerTimeOut;
 let minutesDisplay = document.querySelector(".minutes");
 let secondsDisplay = document.querySelector(".seconds");
-let minutes = Number(minutesDisplay.textContent)
+let minutes = Number(minutesDisplay.textContent);
 
 function setTime() {
-  minutes = prompt("Quantos minutos? ") || 0;
+  let newMinutes = prompt("Quantos minutos? ");
+  if (!newMinutes) {
+    resetTimer();
+    return;
+  }
+
+  minutes = newMinutes;
   updateTimerDisplay(minutes, 0);
 }
 
