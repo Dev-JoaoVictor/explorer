@@ -7,20 +7,39 @@ let minutesDisplay = document.querySelector(".minutes");
 let secondsDisplay = document.querySelector(".seconds");
 let minutes;
 
+function setTime() {
+  let setMinutes = prompt("Quantos minutos? ")
+  minutesDisplay.textContent = String((setMinutes). padStart(2, "0"))
+}
+
 function countdown() {
   setTimeout(() => {
     let seconds = Number(secondsDisplay.textContent);
+    let minutes = Number(minutesDisplay.textContent)
 
     if (seconds <= 0) {
       seconds = 2;
+      minutesDisplay.textContent = String(minutes - 1).padStart(2, "0")
     }
 
-    secondsDisplay.textContent = seconds - 1;
+    secondsDisplay.textContent = String(seconds - 1).padStart(2, "0")
+
+
+
+    if (minutes <= 0) {
+      buttonPlay.classList.toggle("hide");
+      buttonPause.classList.toggle("hide");
+      return
+    }
+
+    
+
     countdown();
   }, 1000);
 }
 
 buttonPlay.addEventListener("click", () => {
+  setTime()
   buttonPlay.classList.toggle("hide");
   buttonPause.classList.toggle("hide");
 
@@ -34,12 +53,14 @@ buttonPause.addEventListener("click", () => {
 
 buttonMore.addEventListener("click", () => {
   let moreMinutes = Number(minutesDisplay.textContent);
-  moreMinutes += 5;
-  minutesDisplay.textContent = moreMinutes;
+  minutesDisplay.textContent = String(moreMinutes + 5).padStart(2, "0");
 });
 
 buttonAnyLess.addEventListener("click", () => {
   let lessMinutes = Number(minutesDisplay.textContent);
-  lessMinutes -= 5;
-  minutesDisplay.textContent = lessMinutes;
+
+  if(lessMinutes <= 5 ||  lessMinutes <= 0) {
+    return
+  }
+  minutesDisplay.textContent = String(lessMinutes - 5).padStart(2, "0")
 });
