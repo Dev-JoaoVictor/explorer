@@ -4,10 +4,23 @@ const buttonStop = document.querySelector(".stop");
 const buttonMore = document.querySelector(".more");
 const buttonAnyLess = document.querySelector(".anyLess");
 
+const buttonSun = document.querySelector('.sun')
+const buttonMoon = document.querySelector('.moon')
+const theme = document.documentElement
+
+
+
 let timerTimeOut;
 let minutesDisplay = document.querySelector(".minutes");
 let secondsDisplay = document.querySelector(".seconds");
 let minutes = Number(minutesDisplay.textContent);
+
+function toggleTheme() {
+  buttonSun.classList.toggle('hide')
+  buttonMoon.classList.toggle('hide')
+  theme.classList.toggle('dark')
+  
+}
 
 function setTime() {
   let newMinutes = prompt("Quantos minutos? ");
@@ -90,3 +103,11 @@ buttonAnyLess.addEventListener("click", () => {
   }
   updateTimerDisplay(lessMinutes - 5, 0);
 });
+
+buttonSun.addEventListener("click", () => {
+  toggleTheme()
+})
+
+buttonMoon.addEventListener("click", () => {
+  toggleTheme()
+})
