@@ -3,13 +3,15 @@ const buttonPause = document.querySelector(".pause");
 const buttonStop = document.querySelector(".stop");
 const buttonMore = document.querySelector(".more");
 const buttonAnyLess = document.querySelector(".anyLess");
+
+let timerTimeOut;
 let minutesDisplay = document.querySelector(".minutes");
 let secondsDisplay = document.querySelector(".seconds");
-let minutes;
+let minutes = Number(minutesDisplay.textContent)
 
 function setTime() {
-  let setMinutes = prompt("Quantos minutos? ") || 0
-  updateTimerDisplay(setMinutes, 0);
+  minutes = prompt("Quantos minutos? ") || 0;
+  updateTimerDisplay(minutes, 0);
 }
 
 setTime();
@@ -19,13 +21,18 @@ function resetControls() {
   buttonPause.classList.toggle("hide");
 }
 
+function resetTimer() {
+  updateTimerDisplay(minutes, 0);
+  clearTimeout(timerTimeOut);
+}
+
 function updateTimerDisplay(minutes, seconds) {
   minutesDisplay.textContent = String(minutes).padStart(2, "0");
   secondsDisplay.textContent = String(seconds).padStart(2, "0");
 }
 
 function countdown() {
-  setTimeout(() => {
+  timerTimeOut = setTimeout(() => {
     let seconds = Number(secondsDisplay.textContent);
     let minutes = Number(minutesDisplay.textContent);
 
@@ -40,7 +47,7 @@ function countdown() {
 
     if (seconds <= 0) {
       seconds = 60;
-      --minutes
+      --minutes;
     }
 
     updateTimerDisplay(minutes, String(seconds - 1));
@@ -55,11 +62,18 @@ buttonPlay.addEventListener("click", () => {
 
 buttonPause.addEventListener("click", () => {
   resetControls();
+  clearTimeout(timerTimeOut);
+});
+
+buttonStop.addEventListener("click", () => {
+  buttonPause.classList.add("hide");
+  buttonPlay.classList.remove("hide");
+  resetTimer();
 });
 
 buttonMore.addEventListener("click", () => {
   let moreMinutes = Number(minutesDisplay.textContent);
-  updateTimerDisplay(moreMinutes, 0);
+  updateTimerDisplay(moreMinutes + 5, 0);
 });
 
 buttonAnyLess.addEventListener("click", () => {
@@ -68,9 +82,5 @@ buttonAnyLess.addEventListener("click", () => {
   if (lessMinutes <= 5 || lessMinutes <= 0) {
     return;
   }
-  updateTimerDisplay(0, lessMinutes);
-});
-
-buttonStop.addEventListener("click", () => {
-  resetControls();
+  updateTimerDisplay(lessMinutes - 5, 0);
 });
