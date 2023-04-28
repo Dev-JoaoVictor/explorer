@@ -8,15 +8,20 @@ let secondsDisplay = document.querySelector(".seconds");
 let minutes;
 
 function setTime() {
-  let setMinutes = prompt("Quantos minutos? ");
-  minutesDisplay.textContent = String(setMinutes.padStart(2, "0"));
+  let setMinutes = prompt("Quantos minutos? ") || 0
+  updateTimerDisplay(setMinutes, 0);
 }
 
-// setTime();
+setTime();
 
 function resetControls() {
   buttonPlay.classList.toggle("hide");
   buttonPause.classList.toggle("hide");
+}
+
+function updateTimerDisplay(minutes, seconds) {
+  minutesDisplay.textContent = String(minutes).padStart(2, "0");
+  secondsDisplay.textContent = String(seconds).padStart(2, "0");
 }
 
 function countdown() {
@@ -26,18 +31,19 @@ function countdown() {
 
     secondsDisplay.textContent = "00";
 
+    updateTimerDisplay(minutes, 0);
+
     if (minutes <= 0) {
-      resetControls()
+      resetControls();
       return;
     }
 
     if (seconds <= 0) {
-      seconds = 2;
-      minutesDisplay.textContent = String(minutes - 1).padStart(2, "0");
+      seconds = 60;
+      --minutes
     }
 
-    secondsDisplay.textContent = String(seconds - 1).padStart(2, "0");
-
+    updateTimerDisplay(minutes, String(seconds - 1));
     countdown();
   }, 1000);
 }
@@ -48,12 +54,12 @@ buttonPlay.addEventListener("click", () => {
 });
 
 buttonPause.addEventListener("click", () => {
-  resetControls()
+  resetControls();
 });
 
 buttonMore.addEventListener("click", () => {
   let moreMinutes = Number(minutesDisplay.textContent);
-  minutesDisplay.textContent = String(moreMinutes + 5).padStart(2, "0");
+  updateTimerDisplay(moreMinutes, 0);
 });
 
 buttonAnyLess.addEventListener("click", () => {
@@ -62,9 +68,9 @@ buttonAnyLess.addEventListener("click", () => {
   if (lessMinutes <= 5 || lessMinutes <= 0) {
     return;
   }
-  minutesDisplay.textContent = String(lessMinutes - 5).padStart(2, "0");
+  updateTimerDisplay(0, lessMinutes);
 });
 
-buttonStop.addEventListener('click', () =>{
-  resetControls()
-})
+buttonStop.addEventListener("click", () => {
+  resetControls();
+});
