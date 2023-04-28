@@ -1,7 +1,5 @@
 import { Theme } from "./theme.toggle.js";
-
-const sun = document.querySelector(".sun");
-const moon = document.querySelector(".moon");
+import { sun, moon } from "./elements.js";
 
 const configTheme = Theme({
   sun,
