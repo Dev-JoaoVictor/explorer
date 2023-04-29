@@ -27,10 +27,16 @@ export function Controls({
     buttonPlay.classList.remove("hide");
   }
 
+  function reset() {
+    buttonPause.classList.add("hide");
+    buttonPlay.classList.remove("hide");
+  }
+
   return {
     themeDark,
     themeLight,
     stop,
+    reset,
     play
   };
 }

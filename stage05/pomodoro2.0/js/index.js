@@ -1,6 +1,7 @@
 import { Timer } from "./timer.js";
 import { Events } from "./events.js";
 import { Controls } from "./controls.js";
+import Sound from "./sounds.js";
 import {
   buttonMoon,
   buttonSun,
@@ -22,9 +23,11 @@ const controls = Controls({
 const time = Timer({
   minutesDisplay,
   secondsDisplay,
-  resetControls: controls.stop(),
+  resetControls: controls.reset,
 });
 
-time.setTime()
+time.setTime();
 
-Events({ controls, time });
+const sound = Sound();
+
+Events({ controls, time, sound });

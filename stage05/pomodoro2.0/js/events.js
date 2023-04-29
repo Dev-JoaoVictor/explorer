@@ -30,7 +30,7 @@ export function Events({ controls, time }) {
   })
 
   buttonPause.addEventListener("click", () => {
-    controls.stop();
+    controls.reset();
     time.hold()
   });
   
