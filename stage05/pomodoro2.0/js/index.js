@@ -31,3 +31,8 @@ time.setTime();
 const sound = Sound();
 
 Events({ controls, time, sound });
+
+const container = document.querySelector(".container-cards");
+const cards = container.querySelectorAll(".card");
+
+
