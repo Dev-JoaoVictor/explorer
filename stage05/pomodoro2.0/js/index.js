@@ -1,6 +1,7 @@
 import { Timer } from "./timer.js";
 import { Events } from "./events.js";
 import { Controls } from "./controls.js";
+import { cardSelected } from "./cardSelected.js";
 import Sound from "./sounds.js";
 import {
   buttonMoon,
@@ -27,6 +28,8 @@ const time = Timer({
 });
 
 time.setTime();
+
+cardSelected()
 
 const sound = Sound();
 
