@@ -138,3 +138,48 @@ input[type="range"]::-webkit-slider-thumb {
 .card.select input[type="range"]::-webkit-slider-thumb {
   background: var(--bg-slider-select);
 }
+
+
+@media (max-width:  900px ) {
+  main{
+    gap: 3rem;
+  }
+  
+  .container{ 
+    gap: 0;
+  }
+  .card {
+    width: 12rem;
+    height: 10rem;
+  }
+
+  .card input {
+    display: none;
+  }
+}
+
+@media (max-width:  650px ) {
+  body{
+    display: block;
+    text-align: center;
+    height: max-content;
+  }
+  body img {
+    margin: 5rem;
+    justify-self: center;
+  }
+  main {
+    display: grid;
+    place-items: center;
+    align-self: flex-start;
+  }
+  .timer {
+    font-size: 10rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+}
