@@ -176,6 +176,10 @@ input[type="range"]::-webkit-slider-thumb {
   .timer {
     font-size: 10rem;
   }
+
+  .controls {
+    gap: 2rem;
+  }
   .container {
     display: flex;
     flex-direction: column;
