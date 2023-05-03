@@ -10,6 +10,7 @@
   --tc-title: #b52184;
   --tc-text: #312d64;
   --tc-button: #ffffff;
+  --tc-footer: #ffffff;
 
   --bg-card: #ffffff;
   --bx-card: rgba(0, 0, 0, 0.25);
@@ -20,15 +21,15 @@
 body {
   font-family: "Mulish", sans-serif;
   display: grid;
-
+  place-content: center;
   width: 100vw;
 }
 
 main {
   display: grid;
+  width: 100%;
   place-items: center;
   justify-content: center;
-  width: 100vw;
 }
 
 /*Primeira seção*/
@@ -36,10 +37,6 @@ main {
 .primary {
   text-align: center;
   margin-bottom: 9.3rem;
-}
-
-.primary img {
-  margin: 0 3.4rem;
 }
 
 .primary h2 {
@@ -63,6 +60,8 @@ main {
 .secundary {
   padding: 5.3rem 9.2rem;
   display: grid;
+  width: 100vw;
+  place-content: center;
   gap: 5rem;
   background: var(--bg-section);
 }
@@ -110,7 +109,8 @@ main {
 }
 
 .contact input,
-textarea {
+textarea,
+button {
   border: 1px solid var(--tc-text);
   padding: 1.2rem 1.6rem;
   border-radius: 1.6rem;
@@ -122,7 +122,6 @@ textarea {
 }
 
 .contact button {
-  border: none;
   font-weight: 700;
   font-size: 1.4rem;
   background: var(--bg-button);
@@ -130,4 +129,16 @@ textarea {
   color: var(--tc-button);
   border-radius: 1.6rem;
   width: max-content;
+}
+
+/*footer*/
+
+footer {
+  color: var(--tc-footer);
+  background: var(--bg-section);
+  padding: 1.6rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 2.4rem;
 }
