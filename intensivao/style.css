@@ -3,3 +3,45 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  font-size: 62.5%;
+
+  --tc-title: #b52184;
+  --tc-text:  #312D64;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+/*Primeira seção*/
+
+.primary {
+  text-align: center;
+}
+
+.primary img {
+  margin: 0 3.4rem;
+}
+
+.primary h2 {
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  margin-top: 1.4rem;
+  color: var(--tc-title);
+}
+
+.primary p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0.5rem 0 3.5rem;
+  line-height: 25px;
+  color: var(--tc-text);
+}
