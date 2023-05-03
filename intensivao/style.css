@@ -9,16 +9,18 @@
 
   --tc-title: #b52184;
   --tc-text: #312d64;
+  --tc-button: #ffffff;
 
   --bg-card: #ffffff;
   --bx-card: rgba(0, 0, 0, 0.25);
   --bg-section: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+  --bg-button: var(--bg-section);
 }
 
 body {
   font-family: "Mulish", sans-serif;
   display: grid;
-  
+
   width: 100vw;
 }
 
@@ -85,4 +87,47 @@ main {
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 2rem;
+}
+
+/* Formulário*/
+
+.contact {
+  padding: 7.8rem 4rem 6.5rem;
+  align-items: flex-start;
+}
+
+.contact h2 {
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: var(--tc-title);
+  margin-bottom: 4.2rem;
+}
+
+.contact form {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.contact input,
+textarea {
+  border: 1px solid var(--tc-text);
+  padding: 1.2rem 1.6rem;
+  border-radius: 1.6rem;
+}
+
+.contact form textarea {
+  width: 34.8rem;
+  height: 12.6rem;
+}
+
+.contact button {
+  border: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  background: var(--bg-button);
+  padding: 1.6rem;
+  color: var(--tc-button);
+  border-radius: 1.6rem;
+  width: max-content;
 }
