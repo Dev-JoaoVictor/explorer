@@ -8,22 +8,32 @@
   font-size: 62.5%;
 
   --tc-title: #b52184;
-  --tc-text:  #312D64;
+  --tc-text: #312d64;
+
+  --bg-card: #ffffff;
+  --bx-card: rgba(0, 0, 0, 0.25);
+  --bg-section: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
 }
 
 body {
   font-family: "Mulish", sans-serif;
+  display: grid;
+  
+  width: 100vw;
 }
 
 main {
   display: grid;
   place-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 
 /*Primeira seção*/
 
 .primary {
   text-align: center;
+  margin-bottom: 9.3rem;
 }
 
 .primary img {
@@ -44,4 +54,35 @@ main {
   margin: 0.5rem 0 3.5rem;
   line-height: 25px;
   color: var(--tc-text);
+}
+
+/*Segunda seção*/
+
+.secundary {
+  padding: 5.3rem 9.2rem;
+  display: grid;
+  gap: 5rem;
+  background: var(--bg-section);
+}
+
+.planet {
+  background: var(--bg-card);
+  border-radius: 1.9rem;
+  box-shadow: 0px 3.31077px 13.2431px var(--bx-card);
+  padding: 2.6rem;
+  width: 35.2rem;
+}
+
+.planet h3 {
+  font-weight: 900;
+  font-size: 2.9rem;
+  line-height: 3.7rem;
+  margin: 3.3rem 0 1.9rem;
+  color: var(--tc-title);
+}
+
+.planet p {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
