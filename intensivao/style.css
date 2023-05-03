@@ -39,6 +39,11 @@ main {
   margin-bottom: 9.3rem;
 }
 
+.astronaut {
+  width: 36.4rem;
+
+}
+
 .primary h2 {
   font-weight: 900;
   font-size: 3.2rem;
@@ -66,7 +71,7 @@ main {
   background: var(--bg-section);
 }
 
-.planet {
+.planet-card {
   background: var(--bg-card);
   border-radius: 1.9rem;
   box-shadow: 0px 3.31077px 13.2431px var(--bx-card);
@@ -74,7 +79,7 @@ main {
   width: 35.2rem;
 }
 
-.planet h3 {
+.planet-card h3 {
   font-weight: 900;
   font-size: 2.9rem;
   line-height: 3.7rem;
@@ -82,7 +87,7 @@ main {
   color: var(--tc-title);
 }
 
-.planet p {
+.planet-card p {
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 2rem;
@@ -117,7 +122,7 @@ button {
 }
 
 .contact form textarea {
-  width: 34.8rem;
+  min-width: 34.8rem;
   height: 12.6rem;
 }
 
@@ -131,14 +136,80 @@ button {
   width: max-content;
 }
 
+.conta img {
+  display: none;
+}
+
 /*footer*/
 
 footer {
   color: var(--tc-footer);
   background: var(--bg-section);
   padding: 1.6rem;
-  text-align: center;
   font-weight: 600;
   font-size: 1.9rem;
   line-height: 2.4rem;
+  height: 7.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .primary {
+    display: flex;
+    gap: 2.8rem;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .primary img {
+    width: 71.9rem;
+    height: 73.3rem;
+  }
+
+  .secundary {
+    display: flex;
+    padding: 6.4rem;
+  }
+
+  .planet-card {
+    padding: 3.2rem;
+    width: 36.6rem;
+    height: 44.8rem;
+  }
+
+  .planet-card h3 {
+    font-size: 3.5rem;
+    line-height: 4.4rem;
+  }
+  
+  .planet-card p {
+    font-weight: 600;
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+  }
+
+  .contact {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .conta img {
+    display: block;
+  }
+
+  .formulario {
+    width: 100%;
+    margin: 9.5rem 9.5rem 9.5rem 10.2rem;
+  }
+
+  .formulario h2 {
+    font-size: 4.2rem;
+    line-height: 5.3rem;
+  }
+
+  
 }
