@@ -1,4 +1,6 @@
-class Router {
+export class Router {
+
+
 
   add(routeName, page) {
     this.routes[routeName] = page
@@ -24,3 +26,4 @@ class Router {
       });
   }
 }
+
