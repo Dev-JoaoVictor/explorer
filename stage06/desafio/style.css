@@ -9,6 +9,7 @@
 
   --ft-nav: #c4c4cc;
   --ft-title: #fff;
+  --ft-text: #E1E1E6;
 
   --ft-button-hover: #02799d;
   --bg-button-hover: #fff;
@@ -49,7 +50,7 @@ ul a:hover {
 
 /* Home*/
 
-main {
+.main-home {
   display: grid;
   width: 100vw;
   height: 100vh;
@@ -59,13 +60,13 @@ main {
   margin-top: -13rem;
 }
 
-.container h1 {
+.main-home h1 {
   color: var(--ft-title);
   font-size: 4.8rem;
   margin-bottom: 3.6rem;
 }
 
-.container a {
+.main-home a {
   padding: 1.2rem 3.2rem;
   border: 1px solid;
   border-radius: 0.5rem;
@@ -74,7 +75,7 @@ main {
   transition: background 0.3s;
 }
 
-.container a:hover {
+.main-home a:hover {
   background-color: var(--bg-button-hover);
   color: var(--ft-button-hover);
 }
@@ -82,22 +83,32 @@ main {
 /*Universe and Explore*/
 
 .body-universe {
-  background: url("assets/mountains-universe-2.png") no-repeat center center
+  background: url("assets/mountains-universe02.png") no-repeat center center
     fixed;
   background-size: cover;
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
 }
 
 .body-explorer {
-  background: url("assets/mountains-universe-2.png") no-repeat center center
+  background: url("assets/mountains-universe-3.png") no-repeat center center
     fixed;
   background-size: cover;
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
+}
+
+.main-universe ,
+.main-explorer {
+  margin-left: 10.8rem;
+}
+
+.main-universe h1,
+.main-explorer h1 {
+  font-size: 4.8rem;
+  margin: 6.3rem 0 1.6rem;
+  color: var(--ft-text);
 }
 
 .main-universe p,
 .main-explorer p {
   font-size: 1.8rem;
+  color: var(--ft-text);
+  max-width: 64.8rem;
 }
