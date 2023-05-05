@@ -6,4 +6,67 @@
 
 :root {
   font-size: 62.5%;
+
+  --ft-nav: #ffffff;
+  --ft-title: #fff;
+
+  --ft-button-hover: #02799d;
+  --bg-button-hover: #fff;
+}
+
+body {
+  background: url("assets/mountains-universe-1.png") no-repeat center center
+    fixed;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin: 4rem 4rem 0;
+  gap: 3.2rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 3.2rem;
+}
+
+a {
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--ft-nav);
+}
+
+main {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container h1 {
+  color: var(--ft-title);
+  font-size: 4.8rem;
+  margin-bottom: 3.6rem;
+}
+
+.container a {
+  padding: 1.2rem 3.2rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+.container a:hover {
+  background-color: var(--bg-button-hover);
+  color: var(--ft-button-hover);
 }
