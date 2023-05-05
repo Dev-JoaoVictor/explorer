@@ -7,12 +7,11 @@
 :root {
   font-size: 62.5%;
 
-  --ff-primary: 'Poppins', sans-serif;
+  --ff-primary: "Poppins", sans-serif;
   --text-color: #303030;
 
-
   --hue: 194;
-  --primary-color: hsl(var(--hue), 100%, 63%)
+  --primary-color: hsl(var(--hue), 100%, 63%);
 }
 
 body {
@@ -25,6 +24,59 @@ body * {
   font-family: var(--ff-primary);
 }
 
-button {
+/*Esconde um elemento da tela*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden; /*Tira da tela aquilo que transborda*/
+  clip: rect(0, 0, 0, 0); /*Cria um retangulo*/
+  white-space: nowrap; /*descrever como os espaços em branco dentro dos elementos são manipulados. */
+  border-width: 0;
+}
+
+.app {
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/*Header*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  height: 3.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem 0 0 0.4rem;
+  padding: 0 0.8rem;
+}
+
+.search button {
+  cursor: pointer;
+  height: 3.2rem;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0 .4rem .4rem 0;
   background-color: var(--primary-color);
+}
+
+.search button:hover {
+  filter: brightness(1.1);
 }
