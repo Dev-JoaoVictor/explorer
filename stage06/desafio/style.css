@@ -47,6 +47,8 @@ ul a:hover {
   font-weight: 700;
 }
 
+/* Home*/
+
 main {
   display: grid;
   width: 100vw;
@@ -54,6 +56,7 @@ main {
   place-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: -13rem;
 }
 
 .container h1 {
@@ -74,4 +77,10 @@ main {
 .container a:hover {
   background-color: var(--bg-button-hover);
   color: var(--ft-button-hover);
+}
+
+/*Universe and Explore*/
+
+.main-universe p{
+   font-size: 1.8rem;
 }
