@@ -121,6 +121,13 @@ table tr:nth-child(odd) {
   background: #ddd;
 }
 
+table tr:hover{
+  transform: scale(1.1);
+  transition: ease-out 0.5s;
+  filter: brightness(1.1);
+  box-shadow: 0 1rem 2rem 1rem rgba(0, 0, 0, 0.3);
+}
+
 table td {
   padding: 1.5rem;
   text-align: left;
