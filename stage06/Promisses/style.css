@@ -47,8 +47,10 @@ body * {
 
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
+  margin: 2.5rem 0;
 }
 
 header h1 {
@@ -73,10 +75,80 @@ header h1 {
   height: 3.2rem;
   border: none;
   padding: 0 1rem;
-  border-radius: 0 .4rem .4rem 0;
+  border-radius: 0 0.4rem 0.4rem 0;
   background-color: var(--primary-color);
 }
 
 .search button:hover {
   filter: brightness(1.1);
+}
+
+/*Tabela*/
+
+table {
+  width: 100%;
+  border-collapse: collapse; /*retira a borda */
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+table th {
+  background: var(--primary-color);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 0.4rem;
+}
+
+/*Seleciona as linhas pares da tabela*/
+table tr:nth-child(even) {
+  background: #eee;
+}
+
+/*Seleciona as linhas impares da tabela*/
+table tr:nth-child(odd) {
+  background: #ddd;
+}
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover; /*Faz a imagem cobrir todo espaço*/
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user p{
+  font-weight: bold;
+}
+
+td .remove {
+  border: none;
+  background: none;
+  color: red
 }
