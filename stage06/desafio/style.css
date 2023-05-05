@@ -7,7 +7,7 @@
 :root {
   font-size: 62.5%;
 
-  --ft-nav: #ffffff;
+  --ft-nav: #C4C4CC;
   --ft-title: #fff;
 
   --ft-button-hover: #02799d;
@@ -40,6 +40,11 @@ a {
   font-weight: 400;
   text-decoration: none;
   color: var(--ft-nav);
+}
+
+ul a:hover {
+  color: #fff;
+  font-weight: 700;
 }
 
 main {
