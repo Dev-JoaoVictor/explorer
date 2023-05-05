@@ -7,7 +7,7 @@
 :root {
   font-size: 62.5%;
 
-  --ft-nav: #C4C4CC;
+  --ft-nav: #c4c4cc;
   --ft-title: #fff;
 
   --ft-button-hover: #02799d;
@@ -81,6 +81,23 @@ main {
 
 /*Universe and Explore*/
 
-.main-universe p{
-   font-size: 1.8rem;
+.body-universe {
+  background: url("assets/mountains-universe-2.png") no-repeat center center
+    fixed;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.body-explorer {
+  background: url("assets/mountains-universe-2.png") no-repeat center center
+    fixed;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.main-universe p,
+.main-explorer p {
+  font-size: 1.8rem;
 }
