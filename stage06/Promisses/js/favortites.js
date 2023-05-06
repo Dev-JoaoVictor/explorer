@@ -1,17 +1,53 @@
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root);
+    this.load();
+  }
+
+  load() {
+    this.entries = [
+      {
+        login: "Dev-JoaoVictor",
+        name: "João Victor",
+        public_repos: "30",
+        followers: "120000",
+      },
+      {
+        login: "Dev-JoaoVictor",
+        name: "João Victor",
+        public_repos: "30",
+        followers: "120000",
+      },
+    ];
   }
 }
 
 export class FavoritesView extends Favorites {
   constructor(root) {
     super(root);
+
+    this.tbody = this.root.querySelector("table tbody");
+
     this.update();
   }
 
   update() {
     this.removeAllTr();
+
+    this.entries.forEach((user) => {
+      const row = this.createRow();
+
+      row.querySelector(
+        ".user img"
+      ).src = `https://github.com/${user.login}.png`;
+      row.querySelector(".user img").alt = `imagem de ${user.name}`;
+      row.querySelector(".user p").textContent = user.name;
+      row.querySelector(".user span").textContent = user.login;
+      row.querySelector(".repositories").textContent = user.public_repos;
+      row.querySelector(".followers").textContent = user.followers;
+
+      this.tbody.append(row);
+    });
   }
 
   createRow() {
@@ -39,9 +75,7 @@ export class FavoritesView extends Favorites {
   }
 
   removeAllTr() {
-    const tbody = this.root.querySelector("table tbody");
-
-    tbody.querySelectorAll("tr").forEach((tr) => {
+    this.tbody.querySelectorAll("tr").forEach((tr) => {
       tr.remove();
     });
   }
