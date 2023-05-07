@@ -99,7 +99,7 @@ table * {
 table th {
   background: var(--primary-color);
   text-align: left;
-  font-weight: normal;
+  font-weight: bold;
   padding: 1.5rem;
 }
 
@@ -157,5 +157,6 @@ td.user p{
 td .remove {
   border: none;
   background: none;
-  color: red
+  color: red;
+  cursor: pointer;
 }
