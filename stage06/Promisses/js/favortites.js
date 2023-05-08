@@ -18,28 +18,37 @@ export class Favorites {
     this.root = document.querySelector(root);
     this.load();
 
-    GithubUser.search('Dev-JoaoVictor').then()
+    GithubUser.search("Dev-JoaoVictor").then();
   }
 
   load() {
     this.entries = JSON.parse(localStorage.getItem("@github-favorites:")) || [];
   }
 
+  save() {
+    localStorage.setItem("@github-favorites:", JSON.stringify(this.entries));
+  }
+
   async add(username) {
     try {
-      const user = await GithubUser.search(username)
+      const userExists = this.entries.find((entry) => entry.login === username);
 
-      if(user.login === undefined) {
-        throw new Error('Usuário não encontrado!')
+      if (userExists) {
+        throw new Error("Usuário já cadastrado");
       }
 
-      this.entries = [user, ...this.entries]
-      this.update()
+      const user = await GithubUser.search(username);
 
-    }catch(error) {
-      alert(error.message)
+      if (user.login === undefined) {
+        throw new Error("Usuário não encontrado!");
+      }
+
+      this.entries = [user, ...this.entries];
+      this.update();
+      this.save();
+    } catch (error) {
+      alert(error.message);
     }
-    
   }
 
   delete(user) {
@@ -49,6 +58,7 @@ export class Favorites {
 
     this.entries = filteredEntries;
     this.update();
+    this.save();
   }
 }
 
@@ -59,15 +69,15 @@ export class FavoritesView extends Favorites {
     this.tbody = this.root.querySelector("table tbody");
 
     this.update();
-    this.onadd()
+    this.onadd();
   }
 
   onadd() {
-    const addButton = this.root.querySelector(".search button")
+    const addButton = this.root.querySelector(".search button");
     addButton.onclick = () => {
-      const { value } = this.root.querySelector('.search input')
-      this.add(value)
-    }
+      const { value } = this.root.querySelector(".search input");
+      this.add(value);
+    };
   }
 
   update() {
