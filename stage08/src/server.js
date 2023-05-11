@@ -8,8 +8,14 @@ app.get("/message/:id/:user", (request, response) => {
   response.send(`
     Id da mensagem ${id}.
     Para o usuário: ${user}.
-  `) // envia uma resposta pra quem solicitou a rota
-})
+  `); // envia uma resposta pra quem solicitou a rota
+});
+
+app.get("/users", (resquest, response) => {
+  const { page, limit } = resquest.query;
+
+  response.send(`Página: ${page}. Mostrar: ${limit}`);
+});
 
 const PORT = 3333; //número da porta que será observada
 
