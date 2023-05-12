@@ -2,8 +2,11 @@ const express = require("express"); // importando express
 
 const app = express(); //iniciando express
 
+app.use(express.json());
+
 app.post("/users", (resquest, response) => {
-  response.send(`Você chamou o POST`);
+  const { name, email, password } = resquest.body;
+  response.json({ name, email, password });
 });
 
 const PORT = 3333; //número da porta que será observada
