@@ -6,6 +6,10 @@ class UsersController {
    * update - PUT para atualizar um registro.
    * delete - DELETE para remover um registro.
    */
+  create(resquest, response) {
+    const { name, email, password } = resquest.body;
+    response.json({ name, email, password });
+  }
 }
 
 module.exports = UsersController;
