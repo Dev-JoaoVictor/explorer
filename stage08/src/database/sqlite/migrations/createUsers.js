@@ -1,6 +1,6 @@
 const createUsers = `
   CREATE TABLE IF NOT EXISTS users (
-    id INTERGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR,
     email VARCHAR,
     password VARCHAR,
