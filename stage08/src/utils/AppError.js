@@ -1,4 +1,4 @@
-class AppError {
+class   AppError {
   message;
   statusCode;
 

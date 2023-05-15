@@ -1,4 +1,5 @@
 const AppError = require("../utils/AppError");
+const sqliteConncection = require("../database/sqlite");
 
 class UsersController {
   /** O controller poder ter no máximo 5 métodos
@@ -8,14 +9,20 @@ class UsersController {
    * update - PUT para atualizar um registro.
    * delete - DELETE para remover um registro.
    */
-  create(resquest, response) {
+  async create(resquest, response) {
     const { name, email, password } = resquest.body;
 
-    if (!name) {
-      throw new AppError("Nome  é obrigatório");
+    const database = await sqliteConncection();
+    const checkUserExists = await database.get(
+      "SELECT * FROM  users WHERE email = (?)",
+      [email]
+    ); // subtitui pela variável
+
+    if (checkUserExists) {
+      throw new AppError("Este e-mail já está em uso.");
     }
 
-    response.status(201).json({ name, email, password });
+    return response.status(201).json();
   }
 }
 
