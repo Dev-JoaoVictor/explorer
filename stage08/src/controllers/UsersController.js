@@ -1,6 +1,6 @@
 const { hash } = require("bcryptjs");
 const AppError = require("../utils/AppError");
-const sqliteConncection = require("../database/sqlite");
+const sqliteConnection = require("../database/sqlite");
 
 class UsersController {
   /** O controller poder ter no máximo 5 métodos
@@ -37,7 +37,7 @@ class UsersController {
     const { name, email } = request.body;
     const { id } = request.params;
 
-    const database = await sqliteConncection();
+    const database = await sqliteConnection();
     const user = await database.get("SELECT * FROM users WHERE id = (?)", [id]);
 
     if (!user) {
@@ -61,7 +61,7 @@ class UsersController {
       UPDATE users SET
       name = ?,
       email = ?,
-      updated_at = ?,
+      updated_at = ?
       WHERE id = ?`,
       [user.name, user.email, new Date(), id]
     );
