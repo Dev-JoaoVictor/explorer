@@ -7,5 +7,6 @@ const usersRoutes = Router();
 const usersController = new UsersController();
 
 // usersRoutes.use(myMiddleware) - caso queira utilizar em todas as rotas
-usersRoutes.post("/", usersController.create); 
+usersRoutes.post("/", usersController.create);
+usersRoutes.put("/:id", usersController.update);
 module.exports = usersRoutes;
