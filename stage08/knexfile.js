@@ -6,6 +6,9 @@ module.exports = {
     connection: {
       filename: path.resolve(__dirname, "src", "database", "database.db"), //Passa a reponsabilidade ao sistema de conectar a pasta
     },
+    migrations: {
+      directory:path.resolve(__dirname, "src", "database", "knex", "migrations")
+    },
     useNullAsDefault: true,
   },
 };
