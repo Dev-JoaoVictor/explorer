@@ -13,7 +13,7 @@ class UsersController {
   async create(resquest, response) {
     const { name, email, password } = resquest.body;
 
-    const database = await sqliteConncection();
+    const database = await sqliteConnection();
     const checkUserExists = await database.get(
       "SELECT * FROM  users WHERE email = (?)",
       [email]
