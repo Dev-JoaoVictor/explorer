@@ -8,4 +8,5 @@ const notesController = new NotesController();
 
 // usersRoutes.use(myMiddleware) - caso queira utilizar em todas as rotas
 notesRoutes.post("/:user_id", notesController.create);
+notesRoutes.get("/:id", notesController.show);
 module.exports = notesRoutes;
