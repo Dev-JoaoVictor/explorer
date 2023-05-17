@@ -1,5 +1,5 @@
 exports.up = (knex) =>
-  knex.schema.createTable("notes", (table) => {
+  knex.schema.createTable("tags", (table) => {
     table.increments("id");
     table.text("name").notNullable();
 
