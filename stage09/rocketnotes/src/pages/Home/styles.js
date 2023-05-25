@@ -35,6 +35,17 @@ export const Brand = styled.div`
 
 export const Menu = styled.ul`
   grid-area: menu;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 64px;
+  text-align: center;
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+  > li {
+    margin-bottom: 24px;
+  }
 `;
 
 export const Search = styled.div`
