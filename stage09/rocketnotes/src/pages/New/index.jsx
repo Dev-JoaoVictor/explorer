@@ -44,6 +44,18 @@ export function New() {
   }
 
   async function handleNewNote() {
+    if (!title) {
+      return alert("Digite o título da nota");
+    }
+
+    if (newLink) {
+      return alert("Você esqueceu de adicionar o link");
+    }
+
+    if (newTag) {
+      return alert("Você esqueceu de adicionar a tag");
+    }
+
     await api.post("/notes", {
       title,
       description,
@@ -52,7 +64,7 @@ export function New() {
     });
 
     alert("Nota criada com sucesso!");
-    navigate("/")
+    navigate("/");
   }
 
   return (
@@ -108,10 +120,7 @@ export function New() {
               />
             </div>
           </Section>
-          <Button 
-            title="Salvar"
-            onClick={handleNewNote}
-          />
+          <Button title="Salvar" onClick={handleNewNote} />
         </Form>
       </main>
     </Container>
