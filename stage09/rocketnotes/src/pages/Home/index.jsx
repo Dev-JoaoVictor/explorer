@@ -70,7 +70,7 @@ export function Home() {
           <ButtonText
             title="Todos"
             onClick={() => handleTagSelected("all")}
-            isActive={tagsSelected.length === 0}
+            $isActive={tagsSelected.length === 0}
           />
         </li>
         {tags &&
@@ -79,7 +79,7 @@ export function Home() {
               <ButtonText
                 title={tag.name}
                 onClick={() => handleTagSelected(tag.name)}
-                isActive={tagsSelected.includes(tag.name)}
+                $isActive={tagsSelected.includes(tag.name)}
               />
             </li>
           ))}
