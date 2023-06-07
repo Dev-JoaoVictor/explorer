@@ -18,6 +18,10 @@ export function Home() {
   const [notes, setNotes] = useState([]);
 
   function handleTagSelected(tagName) {
+    if (tagName === "all") {
+      return setTagsSelected([]);
+    }
+
     const alreadySelected = tagsSelected.includes(tagName);
 
     if (alreadySelected) {
@@ -83,10 +87,7 @@ export function Home() {
       <Content>
         <Section title="Minhas notas">
           {notes.map((note) => (
-            <Note
-              key={String(note.id)}
-              data={note}
-            />
+            <Note key={String(note.id)} data={note} />
           ))}
         </Section>
       </Content>
